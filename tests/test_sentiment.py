@@ -10,7 +10,7 @@ client = TestClient(app)
 
 def test_sentiment_response():
     sample_text = "I love this product!"
-    response = client.post("/analyze", json={"text": sample_text})
+    response = client.post("/api/analyze", json={"text":sample_text})
 
     assert response.status_code == 200
 
